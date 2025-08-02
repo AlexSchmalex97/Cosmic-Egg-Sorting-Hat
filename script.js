@@ -12,27 +12,30 @@ function checkSign() {
 
   // ✅ Special case for Kirsten (Gemini)
   if (name === "kirsten" && sign === "gemini") {
-    output.innerText = `Hello, ${name.charAt(0).toUpperCase() + name.slice(1)}! ✨ You are a cosmic *special edition* good egg 🌟🥚💖`;
+    output.innerText = `Hello, ${capitalize(name)}! ✨ You are a cosmic *special edition* good egg 🌟🥚💖`;
     return;
   }
 
   // ✅ Special case for Rosa or Rosana (Aquarius)
   if ((name === "rosa" || name === "rosana") && sign === "aquarius") {
-    output.innerText = `Hello, ${name.charAt(0).toUpperCase() + name.slice(1)}! 🌊✨ You are an *honorary good egg* blessed by the cosmic waters 💎🥚💖`;
+    output.innerText = `Hello, ${capitalize(name)}! 🌊✨ You are an *honorary good egg* blessed by the cosmic waters 💎🥚💖`;
     return;
   }
 
   // ✅ Special case for Carlos or Carl (Aquarius)
   if ((name === "carlos" || name === "carl") && sign === "aquarius") {
-    output.innerText = `Hello, ${name.charAt(0).toUpperCase() + name.slice(1)}! 🌠✨ You are a *legendary good egg*, shining brightly among the stars 🌌🥚💖`;
+    output.innerText = `Hello, ${capitalize(name)}! 🌠✨ You are a *legendary good egg*, shining brightly among the stars 🌌🥚💖`;
     return;
   }
 
   // Normal rules
   if (goodEggs.includes(sign)) {
-    output.innerText = `Hello, ${name.charAt(0).toUpperCase() + name.slice(1)}! You are a good egg 💖`;
+    output.innerText = `Hello, ${capitalize(name)}! You are a good egg 💖`;
   } else {
-    output.innerText = `Hello, ${name.charAt(0).toUpperCase() + name.slice(1)}! You are a bad egg 👿`;
+    output.innerText = `Hello, ${capitalize(name)}! You are a bad egg 👿`;
   }
 }
 
+function capitalize(word) {
+  return word.charAt(0).toUpperCase() + word.slice(1);
+}
