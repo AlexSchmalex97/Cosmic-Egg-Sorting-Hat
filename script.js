@@ -28,7 +28,7 @@ function checkSign() {
     return;
   }
 
-  // Normal rules
+  // ✅ Normal rules
   if (goodEggs.includes(sign)) {
     output.innerText = `Hello, ${capitalize(name)}! You are a good egg 💖`;
   } else {
