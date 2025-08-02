@@ -10,13 +10,16 @@ function checkSign() {
     return;
   }
 
-  // ✅ Special rule for Kirsten (case-insensitive name check)
+  // ✅ Special Kirsten rule (MUST return to stop other checks)
   if (name.toLowerCase() === "kirsten" && sign === "gemini") {
     output.innerText = `Hello, ${name}! You are a cosmic *special edition* good egg 🌟🥚💖`;
-    return;
+    return; // <-- stops the code here so it never reaches "bad egg"
   }
 
+  // Normal rules
   if (goodEggs.includes(sign)) {
     output.innerText = `Hello, ${name}! You are a good egg 💖`;
   } else {
-    output.innerTe
+    output.innerText = `Hello, ${name}! You are a bad egg 👿`;
+  }
+}
