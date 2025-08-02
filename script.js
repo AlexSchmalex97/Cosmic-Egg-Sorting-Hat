@@ -1,5 +1,5 @@
 function checkSign() {
-  const name = document.getElementById("name").value.trim();
+  const name = document.getElementById("name").value.trim().toLowerCase();
   const sign = document.getElementById("sign").value.trim().toLowerCase();
   const output = document.getElementById("output");
 
@@ -10,16 +10,16 @@ function checkSign() {
     return;
   }
 
-  // ✅ Special Kirsten rule (MUST return to stop other checks)
-  if (name.toLowerCase() === "kirsten" && sign === "gemini") {
-    output.innerText = `Hello, ${name}! You are a cosmic *special edition* good egg 🌟🥚💖`;
-    return; // <-- stops the code here so it never reaches "bad egg"
+  // ✅ Special case for Kirsten
+  if (name === "kirsten" && sign === "gemini") {
+    output.innerText = `Hello, ${name.charAt(0).toUpperCase() + name.slice(1)}! ✨ You are a cosmic *special edition* good egg 🌟🥚💖`;
+    return;
   }
 
   // Normal rules
   if (goodEggs.includes(sign)) {
-    output.innerText = `Hello, ${name}! You are a good egg 💖`;
+    output.innerText = `Hello, ${name.charAt(0).toUpperCase() + name.slice(1)}! You are a good egg 💖`;
   } else {
-    output.innerText = `Hello, ${name}! You are a bad egg 👿`;
+    output.innerText = `Hello, ${name.charAt(0).toUpperCase() + name.slice(1)}! You are a bad egg 👿`;
   }
 }
