@@ -22,6 +22,12 @@ function checkSign() {
     return;
   }
 
+  // ✅ Special case for Carlos or Carl (Aquarius)
+  if ((name === "carlos" || name === "carl") && sign === "aquarius") {
+    output.innerText = `Hello, ${name.charAt(0).toUpperCase() + name.slice(1)}! 🌠✨ You are a *legendary good egg*, shining brightly among the stars 🌌🥚💖`;
+    return;
+  }
+
   // Normal rules
   if (goodEggs.includes(sign)) {
     output.innerText = `Hello, ${name.charAt(0).toUpperCase() + name.slice(1)}! You are a good egg 💖`;
