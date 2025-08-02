@@ -10,9 +10,15 @@ function checkSign() {
     return;
   }
 
-  // ✅ Special case for Kirsten
+  // ✅ Special case for Kirsten (Gemini)
   if (name === "kirsten" && sign === "gemini") {
     output.innerText = `Hello, ${name.charAt(0).toUpperCase() + name.slice(1)}! ✨ You are a cosmic *special edition* good egg 🌟🥚💖`;
+    return;
+  }
+
+  // ✅ Special case for Rosa or Rosana (Aquarius)
+  if ((name === "rosa" || name === "rosana") && sign === "aquarius") {
+    output.innerText = `Hello, ${name.charAt(0).toUpperCase() + name.slice(1)}! 🌊✨ You are an *honorary good egg* blessed by the cosmic waters 💎🥚💖`;
     return;
   }
 
@@ -23,3 +29,4 @@ function checkSign() {
     output.innerText = `Hello, ${name.charAt(0).toUpperCase() + name.slice(1)}! You are a bad egg 👿`;
   }
 }
+
