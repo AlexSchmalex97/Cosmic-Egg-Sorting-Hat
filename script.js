@@ -35,6 +35,12 @@ function checkSign() {
     return;
   }
 
+    // ✅ Special case for Salem (Leo)
+  if (name === "salem" && sign === "leo") {
+    output.innerHTML = `Hello, ${safeName}! <br>✨ You are the <em>special edition</em> <i>KING</i> of the eggs. We all bow down at your feet 👑🐈‍⬛🌟🥚💖`;
+    return;
+  }
+
   // ✅ Special case for Kirsten (Gemini)
   if (name === "kirsten" && sign === "gemini") {
     output.innerHTML = `Hello, ${safeName}! <br>✨ You are a cosmic <em>special edition</em> good egg 🌟🥚💖`;
