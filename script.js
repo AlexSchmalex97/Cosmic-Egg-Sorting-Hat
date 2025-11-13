@@ -10,7 +10,18 @@ function checkSign() {
     return;
   }
 
-  // ✅ Special case for Kirsten (Gemini)
+  // ✅ Special case for Sasha and Alex (Virgo)
+    if (name === "alex" && sign === "virgo") {
+    output.innerText = `Hello, ${capitalize(name)}! ✨ You are the *special edition* great egg-- thank you for your service 🌟🥚💖`;
+    return;
+  }
+
+    if (name === "sasha" && sign === "virgo") {
+    output.innerText = `Hello, ${capitalize(name)}! ✨ You are the OG *special edition* good egg-- thank you for your service 🌟🥚💖`;
+    return;
+  }
+
+    // ✅ Special case for Kirsten (Gemini)
   if (name === "kirsten" && sign === "gemini") {
     output.innerText = `Hello, ${capitalize(name)}! ✨ You are a cosmic *special edition* good egg 🌟🥚💖`;
     return;
