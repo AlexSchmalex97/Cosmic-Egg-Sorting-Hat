@@ -45,6 +45,25 @@ if (name === "aaron" && sign === "scorpio") {
   return;
 }
 
+    // ✅ Special case for Chris (Gemini)
+    if (name === "Chris" && sign === "gemini") {
+    output.innerText = `Hello, ${capitalize(name)}! <br>✨ You are the *special edition* bad egg. Do better 🥚`;
+    return;
+  }
+
+      // ✅ Special case for Samantha (Aries)
+    if (name === "Samantha" && sign === "aries") {
+    output.innerText = `Hello, ${capitalize(name)}! <br>✨ You are the *special edition* bad egg. Do better 🥚`;
+    return;
+  }
+
+      // ✅ Special case for Kiara (Scorpio)
+    if (name === "Kiara" && sign === "scorpio") {
+    output.innerhtml = `Hello, ${capitalize(name)}! <br>✨ You are the *special edition* <i>worst</i> egg. Try being a better person 🥚`;
+    return;
+  }
+
+
   // ✅ Normal rules
   if (goodEggs.includes(sign)) {
     output.innerText = `Hello, ${capitalize(name)}! <br>You are a good egg 💖`;
