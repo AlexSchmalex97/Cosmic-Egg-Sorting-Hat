@@ -28,6 +28,12 @@ function checkSign() {
     return;
   }
 
+  // ✅ Special case for Aaron (Scorpio)
+  if (name === "aaron" && sign === "scorpio") {
+    output.innerText = `Hello, ${capitalize(name)}! 🦂✨ You are a *mysteriously good egg*, glowing with powerful Scorpio energy 🌌🥚💖`;
+    return;
+  }
+
   // ✅ Normal rules
   if (goodEggs.includes(sign)) {
     output.innerText = `Hello, ${capitalize(name)}! You are a good egg 💖`;
